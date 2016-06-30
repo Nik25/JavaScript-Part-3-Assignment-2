@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Session 7- Assignment 2- Hide Odd Rows</title>
+
+    
+</head>
+
+<body>
+        <h1>Assignment 2- Hide Odd Rows</h1>
+
+    <table border='1'>
+
+        <tr><td>row 1</td></tr>
+
+        <tr><td>row 2</td></tr>
+
+        <tr><td>row 3</td></tr>
+
+        <tr><td>row 4</td></tr>
+
+        <tr><td>row 5</td></tr>
+
+    </table>
+    <button id="btnHideOddRows">Hide Odd Rows</button>
+       
+    <script>
+    function hideOddRows() {
+        var rows = document.querySelectorAll('body table tr'),
+            i;
+
+        for (i = 0; i < rows.length; i += 2) {
+            rows[i].style.display = 'none';
+        }
+    }
+        var button = document.getElementById('btnHideOddRows');
+        button.addEventListener('click', hideOddRows, false);
+    </script>
+    
+</body>
+</html>
